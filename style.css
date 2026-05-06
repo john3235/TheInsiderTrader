@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: #1a1008;
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(139, 90, 43, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(205, 162, 100, 0.1) 0%, transparent 50%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+x1 { 
+    display: grid;
+    background-color: #2a1a08;
+    border-bottom: 2px solid rgba(205, 162, 100, 0.3);
+    height: 100px;
+    font-size: 500%;
+    align-items: center;
+    justify-content: center;
+    color: #cda264;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    font-family: 'Playfair Display', Georgia, serif;
+    animation: fadeDown 0.7s ease both;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1000px;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    padding: 40px;
+    background: #fdf6ec;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(205, 162, 100, 0.2);
+    position: relative;
+    animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+label {
+    font-weight: 400;
+    color: #3a2a1a;
+    font-size: 20px;
+    width: 500px;
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: 0.02em;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 12px;
+    border: 1px solid #d4b896;
+    border-bottom: 2px solid #9a7040;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 525px;
+    height: 80px;
+    font-size: x-large;
+    background: #fffdf9;
+    color: #2a1a08;
+    font-family: 'Source Serif 4', Georgia, serif;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #9a7040;
+    box-shadow: 0 2px 12px rgba(154, 112, 64, 0.15);
+}
+
+button {
+    padding: 12px;
+    background-color: #2a1a08;
+    color: #cda264;
+    border: 1px solid #9a7040;
+    width: 525;
+    height: 80;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #9a7040;
+    color: #fdf6ec;
+    box-shadow: 0 4px 16px rgba(154, 112, 64, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.box {
+    background: #2a1a08;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid rgba(205, 162, 100, 0.25);
+    animation: fadeDown 0.5s ease both;
+}
+
+x2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 500%;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #cda264;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+forgot {
+    display: block;
+    font-size: large;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    color: #9a7040;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-style: italic;
+}
+
+forgot:hover {
+    color: #cda264;
+}
+
+body:has(h1:first-child) {
+    font-family: 'Source Serif 4', Georgia, serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f5f0e8;
+    background: #f5f0e8;
+    display: block;
+    flex-direction: unset;
+    min-height: unset;
+}
+
+body:has(h1:first-child) h1 {
+    color: #9a3030;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+body:has(h1:first-child) p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 15px 0;
+}
+
+body:has(h1:first-child) a {
+    color: #9a7040;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #9a7040;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+body:has(h1:first-child) a:hover {
+    background-color: #9a7040;
+    color: white;
+}
+
+.box-story {
+    background: #2a1a08;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid rgba(205, 162, 100, 0.2);
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    animation: fadeUp 0.5s ease both;
+    max-height: 300px;
+    
+}
+
+.box-story:nth-child(1) { animation-delay: 0.05s; }
+.box-story:nth-child(2) { animation-delay: 0.15s; }
+.box-story:nth-child(3) { animation-delay: 0.25s; }
+.box-story:nth-child(4) { animation-delay: 0.35s; }
+
+
+
+
+.box-story img {
+    border-radius: 3px;
+    margin-top: 14px;
+    transition: opacity 0.25s ease;
+    filter: sepia(15%) contrast(1.05);
+    max-width: 300px;
+}
+
+
+
+g1 {
+    font-size: large;
+    text-align: center;
+    color: #e8d5b0;
+    font-family: 'Source Serif 4', Georgia, serif;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.newspaper-body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f0e8;
+}
+
+.newspaper {
+    background-color: #fffdf9;
+    padding: 30px;
+    border: 3px solid #2a1a08;
+    box-shadow: 4px 4px 0 #cda264;
+}
+
+.newspaper h1 {
+    font-size: 48px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid #2a1a08;
+    padding-bottom: 10px;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #1a0e04;
+    letter-spacing: 0.04em;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #7a6040;
+}
+
+.article {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #2a1a08;
+    columns: 2;
+    column-gap: 30px;
+}
+
+.box-story-container {
+    display: grid;
+    grid-template-columns: repeat(3, 220px) 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    padding: 10px;
+    align-items: stretch;
+    width: 100%;
+    height: 200px;
+    max-height: 200px;
+}
+
+.worldcup-box {
+    grid-column: 4;
+    grid-row: 1 / 3;
+    max-width: none;
+    width: 100%;
+    background: #2a1a08;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border: 1px solid rgba(205, 162, 100, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.worldcup-box:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    border-color: rgba(205, 162, 100, 0.55);
+}
+
+.worldcup-box img {
+    width: 50%;
+    height: auto;
+    border-radius: 3px;
+    margin-top: 14px;
+    object-fit: cover;
+}
+
+.worldcup-box g1 {
+    font-size: large;
+    text-align: center;
+    color: #e8d5b0;
+    font-family: 'Source Serif 4', Georgia, serif;
+    line-height: 1.5;
+    font-style: italic;
+    
+}
